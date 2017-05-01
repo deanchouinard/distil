@@ -1,0 +1,11 @@
+APP="distil"
+
+BUILD_HOST="stage"
+BUILD_USER="dean"
+BUILD_AT="/tmp/edeliver/distil/builds"
+
+PRODUCTION_HOSTS="www.catmountain.com"
+PRODUCTION_USER="dean"
+DELIVER_TO="/home/dean"
+
+
