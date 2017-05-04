@@ -1,11 +1,23 @@
 APP="distil"
 
-BUILD_HOST="stage"
+BUILD_HOST="10.0.0.23"
 BUILD_USER="dean"
-BUILD_AT="/tmp/edeliver/distil/builds"
+BUILD_AT="/home/dean/edeliver/distil/builds"
+
+STAGING_HOSTS="www.catmountain.com"
+STAGING_USER="dean"
+DELIVER_TO="/home/dean"
 
 PRODUCTION_HOSTS="www.catmountain.com"
 PRODUCTION_USER="dean"
 DELIVER_TO="/home/dean"
 
+pre_erlang_get_and_update_deps() {
+  local _prod_secret_path="/home/dean/build/prod.secret.exs"
+  if [ "$TARGET_MIX_ENV" = "prod" ]; then
+    __sync_remote "
+      ln -sfn '$_prod_secret_path' '$BUILD_AT/config/prod.secret.exs'
+    "
+  fi
+}
 

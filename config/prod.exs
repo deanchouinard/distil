@@ -15,7 +15,8 @@ use Mix.Config
 # which you typically run after static files are built.
 config :distil, Distil.Web.Endpoint,
   on_init: {Distil.Web.Endpoint, :load_from_system_env, []},
-  url: [host: "example.com", port: 80],
+  url: [host: "catmountain.com", port: 80],
+  http: [port: 4000],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
