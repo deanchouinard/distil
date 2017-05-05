@@ -9,10 +9,11 @@ use Mix.Config
 config :distil, Distil.Web.Endpoint,
   http: [port: 4000],
   debug_errors: true,
-  code_reloader: true,
+  code_reloader: false,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../assets", __DIR__)]]
+  watchers: []
+  #  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
+      #                 cd: Path.expand("../assets", __DIR__)]]
 
 # ## SSL Support
 #
@@ -31,15 +32,15 @@ config :distil, Distil.Web.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :distil, Distil.Web.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
-      ~r{priv/gettext/.*(po)$},
-      ~r{lib/distil/web/views/.*(ex)$},
-      ~r{lib/distil/web/templates/.*(eex)$}
-    ]
-  ]
+# config :distil, Distil.Web.Endpoint,
+#   live_reload: [
+#     patterns: [
+#       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+#       ~r{priv/gettext/.*(po)$},
+#       ~r{lib/distil/web/views/.*(ex)$},
+#       ~r{lib/distil/web/templates/.*(eex)$}
+#     ]
+#   ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
