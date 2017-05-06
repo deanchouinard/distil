@@ -11,7 +11,7 @@ config :distil,
 
 # Configures the endpoint
 config :distil, Distil.Web.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "localhost", path: "/distil"],
   secret_key_base: "CgvRLc2KEjm+jAQRC6WUZKXn1pUVVyF1kA3EJxs06snaCoYzsnXgWrFKfGJxHZO3",
   render_errors: [view: Distil.Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Distil.PubSub,
