@@ -40,9 +40,10 @@ pre_erlang_clean_compile() {
 
     # building brunch
     # brunch build --production
+    npm run deploy $SILENCE
 
     # run your custom tasl
-    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phoenix.digest $SILENCE
+    APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
   "
 }
 
