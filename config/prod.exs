@@ -18,10 +18,11 @@ config :distil, Distil.Web.Endpoint,
   debug_errors: true,
   #url: [host: "localhost", port: 4000 ],
   server: true,
-  code_reloader: false,
-  cache_static_lookup: false,
-  check_origin: false,
-  watchers: []
+  code_reloader: false
+  #  cache_static_lookup: false,
+  #check_origin: false,
+  #watchers: []
+  #######
   #on_init: {Distil.Web.Endpoint, :load_from_system_env, []},
   #cache_static_manifest: "priv/static/cache_manifest.json"
 
