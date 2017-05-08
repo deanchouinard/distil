@@ -17,8 +17,8 @@ config :distil, Distil.Web.Endpoint,
   http: [port: 4800],
   debug_errors: true,
   #url: [host: "localhost", port: 4000 ],
-  server: true,
-  code_reloader: false
+  server: true
+  #code_reloader: false
   #  cache_static_lookup: false,
   #check_origin: false,
   #watchers: []
